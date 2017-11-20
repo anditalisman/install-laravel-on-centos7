@@ -5,7 +5,7 @@ sleep 2
 #
 echo "######### INSTALL REPOSITORY EPEL AND WEBTATIC ##########"
 yum install epel-release -y
-rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm -y
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 sleep 2
 #
 #
@@ -33,8 +33,8 @@ chmod -R 755 /var/www/html/laravel/storage/
 chown -R apache:apache /var/www/html/laravel/storage/
 #
 #
-# Now change DocumentRoot on /etc/httpd/conf/httpd.conf
-# from /var/www/html/ to /var/www/html/laravel/public
-# On <Directory "/var/www/html"> change to <Directory "/var/www/html/laravel/public">
-# Still on section <Directory "/var/www/html/laravel/public"> find AllowOverride
-# change None to All
+echo "# Now change DocumentRoot on /etc/httpd/conf/httpd.conf"
+echo "# from /var/www/html/ to /var/www/html/laravel/public"
+echo "# On <Directory "/var/www/html"> change to <Directory "/var/www/html/laravel/public">"
+echo "# Still on section <Directory "/var/www/html/laravel/public"> find AllowOverride"
+echo "# change None to All"
